@@ -1,0 +1,128 @@
+﻿<UserControl x:Class="SL_NameAddress.Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:slx="clr-namespace:C1.Silverlight.Extended;assembly=C1.Silverlight.Extended"
+	xmlns:sl="clr-namespace:C1.Silverlight;assembly=C1.Silverlight"
+    xmlns:gl="clr-namespace:C1.Silverlight.DataGrid;assembly=C1.Silverlight.DataGrid"
+   >
+
+
+    <Grid x:Name="LayoutRoot" Background="LightBlue" Width="Auto" Height="Auto" MinHeight="600" MinWidth="800">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel  Orientation="Horizontal"  Background="DodgerBlue" Grid.Row="0">
+
+        </StackPanel>
+
+        <slx:C1Book  Name="booker" ShowInnerShadows="True" ShowOuterShadows="True" ShowPageFold="Always" 
+                     Visibility="Visible" Grid.Row="1" Width="{Binding Path=LayoutRoot.Width}" Height="Auto"   IsFirstPageOnTheRight="False"
+                       UseLayoutRounding="True" >
+
+            <slx:C1Book.LeftPageTemplate>
+
+                <ControlTemplate>
+
+                    <Border BorderThickness="1,1,2,2" BorderBrush="Gray"
+                        Background="WhiteSmoke">
+
+                        <StackPanel Margin="10,10,25,10">
+
+                            <TextBlock Text="C1Book Sample" FontSize="9"
+                        Margin="0,0,0,10" HorizontalAlignment="Left" />
+                            <slx:C1Accordion >
+                                <slx:C1AccordionItem Height="Auto" Width="Auto" Background="#FFA64B4B" Content="C1AccordionItem"/>
+                            </slx:C1Accordion>
+                            <ContentPresenter />
+                            <!-- content goes here -->
+
+                        </StackPanel>
+
+                    </Border>
+
+                </ControlTemplate>
+
+            </slx:C1Book.LeftPageTemplate>
+
+
+            <slx:C1Book.RightPageTemplate>
+
+                <ControlTemplate>
+
+                    <Border BorderThickness="1,1,2,2" BorderBrush="Gray" Background="White">
+
+                        <StackPanel Name="Dock1" Margin="10,10,25,10" >
+
+                            <TextBlock Text="C1.Silverlight.Extended.dll" FontSize="9"
+                         HorizontalAlignment="Right" Margin="0,0,0,10"    />
+                           
+                            <Grid Name="RightGrid" Width="Auto" Height="Auto" MinHeight="300">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20*"/>
+                                    <RowDefinition Height="20*"/>
+                                    <RowDefinition Height="20*"/>
+                                    <RowDefinition Height="20*"/>
+                                    <RowDefinition Height="20*"/>
+                                </Grid.RowDefinitions>
+
+
+                                <StackPanel Name="Stack1" Grid.Row="0" Background="AliceBlue" MinHeight="20">
+                                    <Button Background="Bisque"/>
+                                </StackPanel>
+                                <StackPanel Name="Stack2" Grid.Row="1" Background="AntiqueWhite" MinHeight="20" />
+                                <StackPanel Name="Stack3" Grid.Row="2" Background="AliceBlue" MinHeight="20"/>
+                                <StackPanel Name="Stack4" Grid.Row="3" Background="AntiqueWhite" MinHeight="20"/>
+                                <StackPanel Name="Stack5" Grid.Row="4" Background="AliceBlue" MinHeight="20"/>
+                            </Grid>
+
+                            <Grid Name="RightGrid2" Width="Auto" Height="Auto" MinHeight="300">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20*"/>
+                                    <RowDefinition Height="20*"/>
+                                    <RowDefinition Height="20*"/>
+                                    <RowDefinition Height="20*"/>
+                                    <RowDefinition Height="20*"/>
+                                </Grid.RowDefinitions>
+
+                                <StackPanel Name="Stack6" Grid.Row="0" Background="AliceBlue" MinHeight="20">
+                                    <Button Background="Bisque"/>
+                                </StackPanel>
+                                <StackPanel Name="Stack7" Grid.Row="1" Background="AntiqueWhite" MinHeight="20" />
+                                <StackPanel Name="Stack8" Grid.Row="2" Background="AliceBlue" MinHeight="20"/>
+                                <StackPanel Name="Stack9" Grid.Row="3" Background="AntiqueWhite" MinHeight="20"/>
+                                <StackPanel Name="Stack10" Grid.Row="4" Background="AliceBlue" MinHeight="20"/>
+                            </Grid>
+
+                            <ContentPresenter/>
+                            <!-- Content goes here -->
+
+                        </StackPanel>
+
+                    </Border>
+
+                </ControlTemplate>
+
+            </slx:C1Book.RightPageTemplate>
+
+
+
+
+
+            <TextBlock Text="Page 1"/>
+            <TextBlock Text="Page 2"/>
+
+        </slx:C1Book>
+
+
+        <StackPanel  Orientation="Horizontal"  Background="DodgerBlue" Grid.Row="2">
+
+
+
+        </StackPanel>
+    </Grid>
+</UserControl>
+
+
